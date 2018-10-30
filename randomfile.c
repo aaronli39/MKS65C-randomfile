@@ -19,6 +19,9 @@ int main() {
         arr[i] = random_num();
         printf("arr[%d]: %d\n", i, arr[i]);
     }
+    i = & arr;
+    int out = open("temp.txt", O_CREAT | O_WRONLY, 0711);
+    write(out, i, 10 * sizeof(int));
 
-    
+
 }
